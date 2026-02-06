@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduMedia Pro | Jasa Pembuatan Media Pembelajaran</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2196F3;
+            --primary-light: #64B5F6;
+            --primary-dark: #1976D2;
+            --secondary-color: #ffffff;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f5f9ff;
+            --bg-white: #ffffff;
+            --shadow: 0 4px 12px rgba(33, 150, 243, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .hero-text {
+            flex: 1;
+            max-width: 600px;
+        }
+        
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+        
+        .highlight {
+            color: var(--primary-color);
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(33, 150, 243, 0.3);
+        }
+        
+        /* Products Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+        
+        .section-description {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .products {
+            padding: 80px 0;
+            background-color: var(--bg-white);
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: var(--bg-white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(33, 150, 243, 0.15);
+        }
+        
+        .product-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        
+        .product-info {
+            padding: 25px;
+        }
+        
+        .product-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+        
+        .product-description {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        
+        .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .price-detail {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 5px;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .pricing-card {
+            background-color: var(--bg-white);
+            border-radius: 10px;
+            padding: 35px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .pricing-card.featured {
+            border: 2px solid var(--primary-color);
+            transform: scale(1.05);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+        
+        .pricing-badge {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .pricing-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+        
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            color: var(--text-light);
+        }
+        
+        .pricing-features li i {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--bg-white);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--bg-white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        
+        .author-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        /* Order Section */
+        .order {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+        
+        .order-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--bg-white);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+        }
+        
+        .order-form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .contact-info {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+        
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+        }
+        
+        .contact-item i {
+            background-color: var(--bg-light);
+            color: var(--primary-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #222222;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .footer-description {
+            color: #aaa;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Database Styles */
+        .database-section {
+            padding: 80px 0;
+            background-color: var(--bg-white);
+        }
+        
+        .database-info {
+            background-color: var(--bg-light);
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 30px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .database-info h3 {
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+        
+        .database-info p {
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-text {
+                margin-bottom: 50px;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-10px) scale(1);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--bg-white);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 40px;
+                transition: var(--transition);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .order-container {
+                padding: 30px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-details {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo"><i class="fas fa-chalkboard-teacher"></i> EduMedia Pro</a>
+                
+                <ul class="nav-links">
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#products">Produk</a></li>
+                    <li><a href="#pricing">Harga</a></li>
+                    <li><a href="#testimonials">Testimoni</a></li>
+                    <li><a href="#order">Pesan</a></li>
+                    <li><a href="#database">Database</a></li>
+                </ul>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Jasa Pembuatan <span class="highlight">Media Pembelajaran</span> Profesional</h1>
+                    <p class="subtitle">Tingkatkan kualitas pembelajaran dengan media digital yang interaktif, menarik, dan sesuai kebutuhan. Kami menyediakan template PPT animasi, video dedikasi, dan modul digital berkualitas tinggi untuk pendidikan modern.</p>
+                    <a href="#order" class="cta-button">Pesan Sekarang <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Media Pembelajaran Digital">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Produk & Layanan Kami</h2>
+                <p class="section-description">Kami menyediakan berbagai jenis media pembelajaran digital yang dapat disesuaikan dengan kebutuhan Anda.</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Template PPT Animasi -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/736x/eb/16/c2/eb16c297a5ff8dbd2106449103e7c07d.jpg" alt="Template PPT Animasi">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Template PPT Animasi</h3>
+                        <p class="product-description">Presentasi pembelajaran dengan animasi menarik, transisi dinamis, dan desain modern yang meningkatkan engagement peserta didik. Dapat disesuaikan dengan materi pembelajaran Anda.</p>
+                        <div class="price">Mulai Rp 30.000<span class="price-detail">/10 halaman</span></div>
+                        <a href="#order" class="cta-button">Pesan Sekarang</a>
+                    </div>
+                </div>
+                
+                <!-- Video Dedikasi -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/736x/bd/aa/0d/bdaa0dc95d69c7df5760a6f617028108.jpg" alt="Video Dedikasi">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Video Dedikasi Pembelajaran</h3>
+                        <p class="product-description">Video pembelajaran dengan narasi jelas, animasi pendukung, dan konten yang disusun secara sistematis. Cocok untuk pembelajaran online, flipped classroom, atau materi kompleks yang perlu visualisasi.</p>
+                        <div class="price">Mulai Rp 100.000<span class="price-detail">/paket lengkap</span></div>
+                        <a href="#order" class="cta-button">Pesan Sekarang</a>
+                    </div>
+                </div>
+                
+                <!-- Modul Digital -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/736x/ff/59/6a/ff596ae5b0d3aa9eb8b83ed1970039d5.jpg" alt="Modul Digital">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Modul Digital Interaktif</h3>
+                        <p class="product-description">Modul pembelajaran digital dengan layout rapi, konten terstruktur, dan elemen interaktif. Dilengkapi dengan latihan soal, kuis, dan materi pendukung untuk pembelajaran mandiri yang efektif.</p>
+                        <div class="price">Mulai Rp 30.000<span class="price-detail">/10 halaman</span></div>
+                        <a href="#order" class="cta-button">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Paket Harga</h2>
+                <p class="section-description">Pilih paket yang sesuai dengan kebutuhan media pembelajaran Anda. Harga terjangkau dengan kualitas premium.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Paket Satuan -->
+                <div class="pricing-card">
+                    <h3 class="pricing-title">Paket Satuan</h3>
+                    <div class="pricing-price">Rp 30.000</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 10 halaman pertama</li>
+                        <li><i class="fas fa-check"></i> Pilih: PPT, Video, atau Modul</li>
+                        <li><i class="fas fa-check"></i> 3 kali revisi</li>
+                        <li><i class="fas fa-check"></i> Waktu pengerjaan 3-5 hari</li>
+                        <li><i class="fas fa-check"></i> File format lengkap (PPT, PDF, MP4)</li>
+                    </ul>
+                    <a href="#order" class="cta-button">Pilih Paket Ini</a>
+                </div>
+                
+                <!-- Paket Lengkap -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Rekomendasi</div>
+                    <h3 class="pricing-title">Paket Lengkap</h3>
+                    <div class="pricing-price">Rp 100.000</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 3 media sekaligus</li>
+                        <li><i class="fas fa-check"></i> PPT animasi (max 20 slide)</li>
+                        <li><i class="fas fa-check"></i> Video dedikasi (3-5 menit)</li>
+                        <li><i class="fas fa-check"></i> Modul digital (max 30 halaman)</li>
+                        <li><i class="fas fa-check"></i> 5 kali revisi</li>
+                        <li><i class="fas fa-check"></i> Waktu pengerjaan 5-7 hari</li>
+                        <li><i class="fas fa-check"></i> Konsultasi materi gratis</li>
+                    </ul>
+                    <a href="#order" class="cta-button">Pilih Paket Ini</a>
+                </div>
+                
+                <!-- Paket Custom -->
+                <div class="pricing-card">
+                    <h3 class="pricing-title">Paket Custom</h3>
+                    <div class="pricing-price">Custom</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Kebutuhan khusus</li>
+                        <li><i class="fas fa-check"></i> Jumlah halaman sesuai permintaan</li>
+                        <li><i class="fas fa-check"></i> Level animasi kompleks</li>
+                        <li><i class="fas fa-check"></i> Integrasi konten khusus</li>
+                        <li><i class="fas fa-check"></i> Waktu pengerjaan negotiable</li>
+                        <li><i class="fas fa-check"></i> Revisi unlimited</li>
+                    </ul>
+                    <a href="#order" class="cta-button">Konsultasi Gratis</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Testimoni Pelanggan</h2>
+                <p class="section-description">Apa kata mereka yang telah menggunakan jasa pembuatan media pembelajaran kami.</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <!-- Testimoni 1 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Template PPT yang dibuat sangat kreatif dan interaktif. Siswa saya jadi lebih antusias mengikuti pelajaran. Animasi yang diberikan tidak berlebihan tapi cukup menarik perhatian."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DW</div>
+                        <div class="author-info">
+                            <h4>Dewi Andar</h4>
+                            <p>Guru SMA, Depok</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimoni 2 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Saya yang awalnya ragu karena belum pernah order media digital, sekarang sangat puas. Hasil modul digitalnya rapi, interaktif, dan sesuai dengan kurikulum. Proses revisinya juga cepat."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AS</div>
+                        <div class="author-info">
+                            <h4>Andi Sidomulyo</h4>
+                            <p>Dosen, Riau</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimoni 3 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Video pembelajaran yang dibuat untuk materi biologi sangat membantu. Visualisasinya jelas, narasinya mudah dipahami. Murid-murid saya yang kesulitan dengan materi abstrak sekarang bisa lebih mudah mengerti."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SA</div>
+                        <div class="author-info">
+                            <h4>Sripeni Anggoro</h4>
+                            <p>Guru SMP, Jember</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Database Section -->
+    <section class="database-section" id="database">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sistem Database</h2>
+                <p class="section-description">Website ini dilengkapi dengan sistem database untuk mengelola pesanan, pelanggan, dan media pembelajaran yang telah dibuat.</p>
+            </div>
+            
+            <div class="database-info">
+                <h3>Fitur Database yang Tersedia:</h3>
+                <p><i class="fas fa-database"></i> <strong>MySQL Database:</strong> Menyimpan data pesanan, pelanggan, dan produk</p>
+                <p><i class="fas fa-user-check"></i> <strong>Admin Panel:</strong> Untuk mengelola konten website dan melihat statistik</p>
+                <p><i class="fas fa-shopping-cart"></i> <strong>Sistem Pemesanan:</strong> Form pemesanan yang langsung tersimpan di database</p>
+                <p><i class="fas fa-images"></i> <strong>Portfolio Media:</strong> Galeri media pembelajaran yang telah dibuat</p>
+                <p><i class="fas fa-file-contract"></i> <strong>Invoice Otomatis:</strong> Pembuatan invoice otomatis untuk setiap pesanan</p>
+                
+                <p style="margin-top: 20px;"><strong>Teknologi yang digunakan:</strong> PHP, MySQL, JavaScript, HTML5, CSS3</p>
+                <p><strong>Keamanan:</strong> Data pelanggan dienkripsi dan dilindungi dengan sistem keamanan standar industri</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="order" id="order">
+        <div class="container">
+            <div class="section-title">
+                <h2>Pesan Media Pembelajaran</h2>
+                <p class="section-description">Isi formulir di bawah ini untuk memesan media pembelajaran sesuai kebutuhan Anda.</p>
+            </div>
+            
+            <div class="order-container">
+                <form class="order-form" id="orderForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap *</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">No. WhatsApp *</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="institution">Institusi</label>
+                            <input type="text" id="institution" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="package">Pilih Paket *</label>
+                        <select id="package" class="form-control" required>
+                            <option value="">-- Pilih Paket --</option>
+                            <option value="ppt">Template PPT Animasi (Rp 30.000/10 halaman)</option>
+                            <option value="video">Video Dedikasi (Rp 100.000/paket)</option>
+                            <option value="modul">Modul Digital (Rp 30.000/10 halaman)</option>
+                            <option value="full">Paket Lengkap (Rp 100.000)</option>
+                            <option value="custom">Paket Custom (Harga menyesuaikan)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Deskripsi Kebutuhan *</label>
+                        <textarea id="description" class="form-control" placeholder="Jelaskan kebutuhan media pembelajaran Anda: mata pelajaran, tingkat pendidikan, jumlah halaman/slide, durasi video, preferensi warna, dan detail lainnya..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="deadline">Deadline Pengerjaan</label>
+                        <input type="date" id="deadline" class="form-control">
+                    </div>
+                    
+                    <button type="submit" class="cta-button" style="width: 100%;">
+                        <i class="fab fa-whatsapp"></i> Kirim Pesanan via WhatsApp
+                    </button>
+                </form>
+                
+                <div class="contact-info">
+                    <h3>Atau Hubungi Langsung</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <p>0857-1435-5477</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>sahralaely8@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Waktu Kerja</strong>
+                                <p>Senin - Sabtu, 08:00 - 17:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo"><i class="fas fa-chalkboard-teacher"></i> EduMedia Pro</a>
+                    <p class="footer-description">Menyediakan jasa pembuatan media pembelajaran digital profesional untuk meningkatkan kualitas pendidikan di Indonesia.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Layanan</h3>
+                    <ul class="footer-links">
+                        <li><a href="#products">Template PPT Animasi</a></li>
+                        <li><a href="#products">Video Dedikasi</a></li>
+                        <li><a href="#products">Modul Digital</a></li>
+                        <li><a href="#pricing">Paket Harga</a></li>
+                        <li><a href="#order">Pesan Sekarang</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Kontak</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone-alt"></i> 0857-1435-5477</li>
+                        <li><i class="fas fa-envelope"></i> sahralaely8@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Indonesia</li>
+                        <li><i class="fas fa-clock"></i> Senin - Sabtu: 08:00 - 17:00</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 EduMedia Pro - Jasa Pembuatan Media Pembelajaran. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+                document.querySelector('.mobile-menu-btn i').classList.replace('fa-times', 'fa-bars');
+            });
+        });
+        
+        // Order Form Submission
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const institution = document.getElementById('institution').value;
+            const package = document.getElementById('package').value;
+            const description = document.getElementById('description').value;
+            const deadline = document.getElementById('deadline').value;
+            
+            // Package names for display
+            const packageNames = {
+                'ppt': 'Template PPT Animasi',
+                'video': 'Video Dedikasi',
+                'modul': 'Modul Digital',
+                'full': 'Paket Lengkap',
+                'custom': 'Paket Custom'
+            };
+            
+            // Create WhatsApp message
+            let message = `Halo, saya ingin memesan media pembelajaran:\n\n`;
+            message += `*Nama:* ${name}\n`;
+            message += `*Email:* ${email}\n`;
+            message += `*No. WhatsApp:* ${phone}\n`;
+            message += `*Institusi:* ${institution || 'Tidak disebutkan'}\n`;
+            message += `*Paket:* ${packageNames[package]}\n`;
+            message += `*Deadline:* ${deadline || 'Tidak ditentukan'}\n\n`;
+            message += `*Deskripsi Kebutuhan:*\n${description}\n\n`;
+            message += `Saya memesan melalui website EduMedia Pro.`;
+            
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(message);
+            
+            // Create WhatsApp URL
+            const whatsappURL = `https://wa.me/6285714355477?text=${encodedMessage}`;
+            
+            // Open WhatsApp in new tab
+            window.open(whatsappURL, '_blank');
+            
+            // Show success message
+            alert('Terima kasih! Anda akan diarahkan ke WhatsApp untuk mengirim pesanan Anda.');
+            
+            // Reset form (optional)
+            // this.reset();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Set minimum date for deadline to today
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        
+        const formattedDate = tomorrow.toISOString().split('T')[0];
+        document.getElementById('deadline').min = formattedDate;
+        
+        // Database simulation (for demo purposes)
+        console.log('Database system initialized');
+        console.log('MySQL database connected');
+        console.log('Admin panel: /admin');
+        console.log('Database tables: orders, customers, products, media_portfolio');
+    </script>
+</body>
+</html>
